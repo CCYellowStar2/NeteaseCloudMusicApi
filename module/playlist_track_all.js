@@ -14,7 +14,7 @@ module.exports = (query, request) => {
     id: playlistId, // 歌单ID
     n: 100000,
     s: query.s || 8,
-  };
+  }
   //不放在data里面避免请求带上无用的数据
   let limit = parseInt(query.limit) || Infinity
   let offset = parseInt(query.offset) || 0
