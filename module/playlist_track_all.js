@@ -7,7 +7,11 @@ module.exports = (query, request) => {
   const urlMatch = playlistUrlPattern.exec(playlistId);
   if (urlMatch) {
     // 如果找到了匹配项，输出提取的歌单ID
+    console.log('从URL提取的歌单ID:', urlMatch[1]);
     playlistId = urlMatch[1];
+  } else {
+    // 如果没找到匹配项，说明传入的就是ID
+    console.log('传入的是歌单ID:', playlistId);
   }
 
   const data = {
