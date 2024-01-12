@@ -3,7 +3,7 @@
 
 module.exports = (query, request) => {
   const playlistUrlPattern = /playlist\?id=(\d+)/;
-  let playlistId = query.id;
+  let playlistId = query.url;
   const urlMatch = playlistUrlPattern.exec(playlistId);
   if (urlMatch) {
     // 如果找到了匹配项，输出提取的歌单ID
